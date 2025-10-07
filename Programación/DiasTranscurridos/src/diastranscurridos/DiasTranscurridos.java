@@ -19,81 +19,79 @@ public class DiasTranscurridos {
         //Declaración de variables
         int dia;
         int mes;
-        final int febrero = 30;
-        final int marzo = 59;
-        final int abril = 90;
-        final int mayo = 120;
-        final int junio = 153;
-        final int julio = 181;
-        final int agosto = 212;
-        final int septiembre = 243;
-        final int octubre = 273;
-        final int noviembre = 304;
-        final int diciembre = 334;
+        int DiasPasados = 0;
+        char confirm;
+        char continuar = 'Y';
+        boolean seguir = false;
+        /*final int Enero,Marzo,Mayo,Julio,Agosto,Octubre,Diciembre = 31;*/
+        final int Enero = 31;
+        final int Febrero = 28;
+        final int Marzo = 31;
+        final int Abril = 30;
+        final int Mayo = 31;
+        final int Junio = 30;
+        final int Julio = 31;
+        final int Agosto = 31;
+        final int Septiembre = 30;
+        final int Octubre = 31;
+        final int Noviembre = 30;
+        final int Diciembre = 31;
+        /*final int Abril,Junio,Septiembre,Noviembre = 30;*/
 
         //Creamos el escaner
         Scanner sc = new Scanner(System.in);
-
-        System.out.println("Introduce el dia de hoy maxi:");
-        dia = sc.nextInt();
-        System.out.println("Introduce el mes de hoy en numero(maximo 12):");
-        mes = sc.nextInt();
-        if(mes >= 1 && mes <= 31 && dia >=1 && dia <= 31){
-            switch (mes) {
-                case 1:
-                    System.out.println("Han pasado "+dia+" dias desde que empezo el año");
-                    break;
-                case 2:
-                    dia = dia+febrero;
-                    System.out.println("Han pasado "+dia+" dias desde que empezo el año");
-                    break;
-                case 3:
-                dia = dia+marzo;
-                System.out.println("Han pasado "+dia+" dias desde que empezo el año");
-                break;
-            case 4:
-                dia = dia+abril;
-                System.out.println("Han pasado "+dia+" dias desde que empezo el año");
-                break;
-            case 5:
-                dia = dia+mayo;
-                System.out.println("Han pasado "+dia+" dias desde que empezo el año");
-                break;
-            case 6:
-                dia = dia+junio;
-                System.out.println("Han pasado "+dia+" dias desde que empezo el año");
-                break;
-            case 7:
-                dia = dia+julio;
-                System.out.println("Han pasado "+dia+" dias desde que empezo el año");
-                break;
-            case 8:
-                dia = dia+agosto;
-                System.out.println("Han pasado "+dia+" dias desde que empezo el año");
-                break;
-            case 9:
-                dia = dia+septiembre;
-                System.out.println("Han pasado "+dia+" dias desde que empezo el año");
-                break;
-            case 10:
-                dia = dia+octubre;
-                System.out.println("Han pasado "+dia+" dias desde que empezo el año");
-                break;
-            case 11:
-                dia = dia+noviembre;
-                System.out.println("Han pasado "+dia+" dias desde que empezo el año");
-                break;
-            case 12:
-                dia = dia+diciembre;
-                System.out.println("Han pasado "+dia+" dias desde que empezo el año");
-                break;
-            default:
-                System.out.println("Ha habido un error a la hora de introduccir las fechas.");;
+        do{
+            System.out.println("Introduce el dia de hoy:");
+            dia = sc.nextInt();
+            System.out.println("Introduce el mes de hoy en numero(maximo 12):");
+            mes = sc.nextInt();
+            for(int i=1; i < mes; i++){
+                switch(i){
+                    case 1:
+                        DiasPasados += Enero;
+                        break;
+                    case 2:
+                        DiasPasados += Febrero;
+                        break;
+                    case 3:
+                        DiasPasados += Marzo;
+                        break;
+                    case 4:
+                        DiasPasados += Abril;
+                        break;
+                    case 5:
+                        DiasPasados += Mayo;
+                        break;
+                    case 6:
+                        DiasPasados += Junio;
+                        break;
+                    case 7:
+                        DiasPasados += Julio;
+                        break;
+                    case 8:
+                        DiasPasados += Agosto;
+                        break;
+                    case 9:
+                        DiasPasados += Septiembre;
+                        break;
+                    case 10:
+                        DiasPasados += Octubre;
+                        break;
+                    case 11:
+                        DiasPasados += Noviembre;
+                        break;
+                    case 12:
+                        DiasPasados += Diciembre;
+                        break;
+                }
             }
-        }
-        else{
-            System.out.println("El dia o mes que has introducido es incorrecto.");
-        }     
+            System.out.println("Han paso "+(DiasPasados += dia-1));
+            System.out.println("¿Quieres seguir utilizando el contador de dias?");
+            System.out.println("Introduce:Y(YES)/N(NO)");
+            confirm = sc.next().charAt(0);
+            confirm = Character.toTitleCase(confirm);
+            seguir = (confirm == continuar)?true:false;        
+        }while(seguir);
     }
     
 }
