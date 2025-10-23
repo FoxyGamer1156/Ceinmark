@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Modern+Antiqua&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Modern+Antiqua&display=swap');
+#div1{
+    background-color: #4F5533;
+}
+.cinzel-decorative-black {
+  font-family: "Cinzel Decorative", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+h1{
+    color: #FFE48A;
+}
+h2{
+    color: #BDA865;
+    font-family: "Cinzel Decorative", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.TextoPrincipal{
+    color:#E5CA87;
+    font-family: "Cinzel Decorative", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.span1{
+    color: #DCCCA8;
+}
+.Grande{
+    font-size: 1.2em;
+    font-weight: bold;
+}
+.Guardabosques{
+    background-color: #765C29;
+    color: #BDA865;
+}
+.Enigma{
+    background-color: #53270E;
+    color: #D9B883;
+}
+.DiosesAureos{
+    background-color: #7B230B;
+    color: #ECAA18;
+}
