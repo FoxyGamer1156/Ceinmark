@@ -55,6 +55,9 @@ public class Funciones {
             }
             System.out.println("¿Que ejercicio quieres comprobar?");
             num_Ejercicio = sc.nextInt();
+            //Este nextLine() es para generar un salto de linea, por si el ejercicio que se va a hacer
+            //es el numero 5. Ya que el nextInt() no genera salto de lines y probocar un problema al recoger la frase,
+            //saltandose el Scanner.
             sc.nextLine();
             if (num_Ejercicio != 0) {
                 switch (num_Ejercicio) {
@@ -106,4 +109,5 @@ public class Funciones {
         }
     }
 }
+
 
