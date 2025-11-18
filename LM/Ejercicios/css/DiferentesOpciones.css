@@ -1,0 +1,54 @@
+.PosicionBotonesPrin{
+    height: 5vh;
+    margin-top: 15vh;
+    margin-left: 13vw;
+}
+.PosicionBotones{
+    height: 5vh;
+    margin-top: 15vh;
+    margin-left: 10vw;
+}
+#CapaPrincipal{
+   background-color: #1E213D;
+    margin-top: 10vh;
+    margin-left: 25vw;
+    width: 50vw;
+    height: 50vh; 
+}
+#Capa1{
+    background-color: cadetblue;
+    margin-top: 10vh;
+    margin-left: 25vw;
+    width: 50vw;
+    height: 50vh;
+}
+#Capa2{
+    background-color: darksalmon;
+    margin-top: 10vh;
+    margin-left: 25vw;
+    width: 50vw;
+    height: 50vh;
+}
+#Capa3{
+    background-color: khaki;
+    margin-top: 10vh;
+    margin-left: 25vw;
+    width: 50vw;
+    height: 50vh;
+}
+.Opcion1[type="button"]:hover{
+    background-color: red;
+    color: aliceblue;
+}
+.Opcion2[type="button"]:hover{
+    background-color: green;
+    color:gold
+}
+.Opcion3[type="button"]:hover{
+    background-color: blue;
+    color: coral;
+}
+.PaginaPrincipal[type="button"]:hover{
+    background-color: black;
+    color: white;
+}
