@@ -6,6 +6,7 @@ div#navbarNav.collapse.navbar-collapse{
 .titulo{
   font-family: "Delius", cursive;;
   background-color: #E8C4B8;
+  /*background-image: url(../img/Banner.png) ;*/
   color: #3E3E3E;
 }
 .TablaOpciones{
