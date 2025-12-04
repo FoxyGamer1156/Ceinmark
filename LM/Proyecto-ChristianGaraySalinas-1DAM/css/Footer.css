@@ -1,13 +1,25 @@
-
 .Footer{
     background-color: #9e887d;
-    color: #F5F3F0;
+    color: #eee8de;
 }
 .AcordeonBoton{
     background-color: #9e887d;
     color: #F5F3F0;
 }
+.TituloAcordeon{
+    margin-left: 19vw;
+}
 .AcordeonBody{
     background-color: #9e887d;
     color: #F5F3F0;
+}
+.textoInformacion{
+    font-size: 2.2vh;
+}
+.textoHorario{
+    font-size: 2.4vh;
+}
+.divisor{
+    width: 95vw;
+    height: 7vh;
 }

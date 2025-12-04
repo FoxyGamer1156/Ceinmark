@@ -1,5 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Delius&display=swap');
 .cuerpo{
     background-color: #E8C4B8;
+    font-family: "Delius Unicase", cursive;
+    font-weight: 400;
+    font-style: normal;
 }
 .GatoOscuro{
     width: 40vw;

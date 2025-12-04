@@ -1,17 +1,41 @@
-@import url('https://fonts.googleapis.com/css2?family=Delius&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gorditas&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 div#navbarNav.collapse.navbar-collapse{
   justify-content: end;
 }
+.nav-item:hover{
+  font-size: 3vh;
+}
+.Icono{
+  width: 8vw;
+  height: 16vh;
+}
 .titulo{
-  font-family: "Delius", cursive;;
+  font-family: "Gorditas", serif;
+  font-weight: 400;
+  font-style: normal;
   background-color: #E8C4B8;
-  /*background-image: url(../img/Banner.png) ;*/
   color: #3E3E3E;
 }
+.Logo{
+  background-color: #8E6762;
+  color: #F5F3F0;
+  margin-left: 1vw;
+  font-size: 3.7vh;
+}
 .TablaOpciones{
+  /*font-family: "Merriweather Sans", sans-serif;
+  font-size: 0.9em;*/
+  color: #F5F3F0;
+  background-color: #A67C68;
+}
+.Lista{
   font-family: "Merriweather Sans", sans-serif;
   font-size: 0.9em;
   color: #F5F3F0;
   background-color: #A67C68;
+}
+.Lista:hover{
+  background-color: #6792a6;
+  color: #f0f2f4;
 }

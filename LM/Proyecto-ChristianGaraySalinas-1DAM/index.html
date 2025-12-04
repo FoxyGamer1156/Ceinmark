@@ -16,13 +16,34 @@
     <div class="container-fluid">
         <!--CABECERA-->
         <header class="text-center">
-            <div class="row titulo">
-
-                <div class="col">
+<!-------------------------------------------------------------------------------->
+<!--------------------------------ZONA DEL TÍTULO--------------------------------->
+<!-------------------------------------------------------------------------------->
+            <div class="row titulo align-items-center">
+                <div class="row">
+                    <div class="col">
+                        &nbsp;
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="row align-items-center Logo">
+                        <div class="col text-end"><image src= "img/Icono.jpg" class="Icono"></image></div>
+                        <div class="col text-start">ESFYNX</div>
+                    </div>
+                </div>
+                <div class="col text-start">
                     <h1>GATOS ESFINGE O SPHYNX</h1>
                     <h3>LOS GATOS CON UN ENCANTO ÚNICO</h3>
                 </div>
+                <div class="row">
+                    <div class="col">
+                        &nbsp;
+                    </div>
+                </div>
             </div>
+<!-------------------------------------------------------------------------------->
+<!-----------------------------TABAL DE NAVEGACIÓN-------------------------------->
+<!-------------------------------------------------------------------------------->
             <div class="row ">
                 <div class="col TablaOpciones">
                     <nav class="navbar navbar-expand">
@@ -42,11 +63,12 @@
                                         <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                             Información
                                         </a>
-                                        <ul class="dropdown-menu">
-                                            <li><a class="dropdown-item" href="html/Cuidados.html">Cuidados</a></li>
-                                            <li><a class="dropdown-item" href="html/Alimentación.html">Alimentación</a></li>
+                                        <ul class="dropdown-menu TablaOpciones">
+                                            <li><a class="dropdown-item Lista" href="html/LaCasa.html">La Casa</a></li>
+                                            <li><a class="dropdown-item Lista" href="html/Cuidados.html">Cuidados</a></li>
+                                            <li><a class="dropdown-item Lista" href="html/Alimentación.html">Alimentación</a></li>
                                             <li><hr class="dropdown-divider"></li>
-                                            <li><a class="dropdown-item" href="html/DatosCuriosos.html">Datos Curiosos</a></li>
+                                            <li><a class="dropdown-item Lista" href="html/DatosCuriosos.html">Datos Curiosos</a></li>
                                         </ul>
                                     </li>
                                 </ul>
@@ -79,14 +101,16 @@
         </main>
         <!--PIE-->
         <footer class="text-center">
-            <!--APARTADO DEL FORMULARIO-->
+<!-------------------------------------------------------------------------------->
+<!----------------------------APARTADO DEL FORMULARIO----------------------------->
+<!-------------------------------------------------------------------------------->
             <div class="row AcordeonBody">
                 <div class="col">
                     <div class="accordion accordion-flush" id="accordionFlushExample">
                         <div class="accordion-item">
                             <h2 class="accordion-header">
                                 <button class="accordion-button collapsed AcordeonBoton" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                                    PARA MAS INFORMACIÓN RELLENE EL FORMULARIO
+                                    <h4 class="TituloAcordeon">PARA MAS INFORMACIÓN RELLENE EL FORMULARIO</h4>
                                 </button>
                             </h2>
                             <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
@@ -223,25 +247,61 @@
                     </div>
                 </div>
             </div>
+<!-------------------------------------------------------------------------------->
+<!-----------------------ZONA DE INFORMACIÓN SOBRE LA CLINCA---------------------->
+<!-------------------------------------------------------------------------------->
             <div class="row Footer justify-content-start">
+                <!--PARA PONER SEPRARDOR-->
+                <div class="row">
+                    <div class="col">
+                        <image src="img/Divisor.png" class="divisor"></image>
+                    </div>
+                </div>
+                <div class="row">
+                        <div class="col">
+                        <!--ESPACIO EN BLANCO PARA HACER UNA PEQUEÑA SEPARACIÓN ABAJO-->
+                            &nbsp;
+                        </div>
+                </div>
                 <div class="col">
-                    CONTACTOS
+                    <div class="row">
+                        <h4>CLINICA VETERINARIA BILBO ZOO</h4>
+                    </div>
+                    <div class="row">
+                        <div class="col">NUESTRO VETERINARIO DE CONFIANZA</div>
+                    </div>
                     <div class="row">
                         <div class="col">
                             <div class="row">
-                                NºTELEFONO:
+                                <div class="col">
+                                    <h6>DIRECCIÓN</h6>
+                                </div> 
                             </div>
-                            <div class="row">
-                                EMAIL:
+                            <div class="row textoInformacion">
+                                <div class="col">
+                                    <a href="https://maps.app.goo.gl/bgsLuZub9iChKR5u5" target="_blank">Dorre Kalea, 2, Ibaiondo, 48005 Bilbao, Bizkaia</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <h6>HORARIO</h6>
+                            <div class="row textoHorario">
+                                <div class="col">LUNES-VIERNES: 10:00-13:30</div>
+                            </div>
+                            <div class="row textoHorario">
+                                <div class="col">SABADO: 10:00-13:30</div>
+                            </div>
+                            <div class="row textoHorario">
+                                <div class="col">DOMINGO: CERRADO</div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col">
-                    ENLACES
-                </div>
-                <div class="col">
-                    REDES SOCIALES:
+                    <div class="row">
+                        <div class="col">
+                        <!--ESPACIO EN BLANCO PARA HACER UNA PEQUEÑA SEPARACIÓN ABAJO-->
+                            &nbsp;
+                        </div>
+                    </div>
                 </div>
             </div>
         </footer>
