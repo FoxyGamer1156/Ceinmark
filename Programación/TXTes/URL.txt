@@ -1,0 +1,6 @@
+https://www.ejemplo1.com/servicios
+http://blog.misitio.org/articulo1
+https://www.tiendaproductos.net/categorias/ropa
+https://subdominio.ejemplo2.edu/noticias/
+https://subdominio.ejemplo2.edu/noticias/
+ftp://ftp.miservidor.com/archivo.zip
