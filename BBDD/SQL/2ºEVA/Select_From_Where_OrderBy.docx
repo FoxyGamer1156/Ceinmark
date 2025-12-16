@@ -1,0 +1,99 @@
+Select: se meten los datos que se quieren obtener cada nombres va separado por comas(,).
+
+From: se meten las tablas de las que queremos obtener infromación. Se separan con coams(,).
+
+Where: Sirve para filtrar los datos que queremos obtener.
+
+Order By: sirve para ordenar por un campo determinado. Puede ser ASC o DESC. Se separan con comas.
+
+
+Select:
+    - Se debe anteponer el nombre de la tabla cuando hay más de una tabla FROM
+      nombresTabla.nombreColumna
+    - Si queremos incluir todas las columnas podemos poner: SELECT*.
+    - Podemos darle un añoas a cada columna para que éste se muestre en la tabla resultante.
+      SELECT id_empleado "codigo de emeplado".
+
+From:
+    - Aquí se definen los nombres de las tablas de las que proceden las columnas del SELECT.
+    - Se pueden definir alias para las tablas:
+        Select u.nombre
+        From Usuarios u;
+
+Where:
+    - Los registros resultantes deben cumplir la/las condicion/es que can en el WHERE.
+    - Se utilizan operadores de comparación, operadores aritméticos, operadores de concatenación y operadores lógicos,
+      funciones o expresiones para filtrar la consulta.
+    - Si queremos obtener los nombres de los usuarios que son mujeres:
+      Select nombre
+      From Usuarios
+      Where sexo='M';
+
+Order By:
+  - Se usa para que aparezcan ordenados los resultados de una consulta.
+    - Se puede ordenar en orden ascendente(ASC) o descendente(DESC).
+    - Por defecto, la ordenación es ascendente.
+    - Es posible ordenar por más de una columna.
+      Select nombre,apellido
+      From Usuarios
+      Order by apellidos, nombre;
+
+Operadores de comparativos:
+  = : igualdad.
+  > : mayor.
+  < : menor.
+  >= : mayor igual
+  <= : menor igual
+  != : distinto
+    Select nombre
+    From Empleados
+    Where nombre != 'Oscar';
+
+IN(valor1, valor2,..., valorN): igual que cualquiera de los miembros.
+NOT IN(valor1, valor2,..., valorN): distinto que los miembros entre paréntesis.
+  Select nombre,ciudad
+  From Empleadoswhere ciudad in('Madrid', 'Barcelona');
+
+BETWEEN valor1 and valor2: contenido dentro del rango.
+NOT BETWEEN valor1 and valor2: no contenido dentro del rango.
+  Select nombre, añoNacimiento
+  From EmpleadosWhere añoNac BETWEEN 1970 and 1990;
+                      añoNac >= 1970 and añoNac<=1990;
+
+LIKE 'abc%': se utiliza contextos para obtener columnas cuyo valor en un campo cumpla una condición textual.
+El '%' sustituye a una cadena de caracteres y el guión bajo "_" sustituyr a un único carácter.
+NOT LIKE '_a%': lo contrario.
+  Select nombre
+  From Usuarios
+  Where nombres LIKE 'R%';
+
+IS NULL: devuleve verdadero si el valor del campo de la fila que examina es nulo.
+IS NOT NULL: devuleve verdadero si el valor del campo de la fila que examina NO es nulo.
+  Select nombre,apellido
+  From Empleados
+  Where Apellido IS NULL;
+
+Diferencias entre LIKE y '=':
+  El operador "LIKE" se utiliza en comparaciones de cadenas de caractares con un patrón de búsqueda.
+  Mientras que el operador '=' buscaría cadenas de caracteres idénticas, el operador "LIKE" busca cadenas de caracteres
+  que contengan la porción de la cadena indicada.
+
+Operadores Lógicos:
+  AND: devuelve verdadero si sus expresiones a derecha e izquierda son ambas verdaderas.
+    Select año
+    From Empleados
+    Where año>1970 and año<1990;
+  OR: devuelve verdadero si alguna de sus expresiones a derecha e izquierda  son verdaderas.
+    Select año
+    From Empleados
+    Where año>1970 OR año=1950;
+  NOT: invierte la lógica de la expresión que le precede.
+    Select año
+    From Empleados
+    Where NOT(año > 1970);
+
+Operadores aritméticos:
+  +,-,*,/.
+  Select salario*1.05
+  From Empleados
+  Where salario<=1500;
