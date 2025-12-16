@@ -1,0 +1,10 @@
+luz
+libro
+sol
+piedra
+gato
+río
+cielo
+flor
+montaña
+noche
