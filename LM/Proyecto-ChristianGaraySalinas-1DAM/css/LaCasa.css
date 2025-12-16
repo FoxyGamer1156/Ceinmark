@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Delius&display=swap');
+.cuerpo{
+    background-color: #E8C4B8;
+    font-family: "Delius Unicase", cursive;
+    font-weight: 400;
+    font-size: 3vh;
+    font-style: normal;
+}
+.Flecha{
+    width: 3.5vw;
+    height: 3.5vh;
+}
+.Basico{
+    width: 25vw;
+    height: 25vh;
+}
+.CalorGato{
+    width: 32vw;
+    height: 32vh;
+}
+.Rascador{
+    width: 30vw;
+    height: 30vh;
+}

@@ -1,0 +1,63 @@
+.Carrusel {
+  display: flex;
+  gap: 4vw;
+  anchor-name: --my-carousel;
+  width: 200vw;
+  height: 40vh;
+  padding: 1vw;
+
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+
+  columns: 1;
+  text-align: center;
+}
+.Contenido {
+  list-style-type: none;
+
+  display: inline-block;
+  height: 100%;
+  width: 30vw;
+
+  background-color: #eeeeee;
+  border: 1px solid #dddddd;
+  padding: 2vw;
+  margin: 2vw;
+
+  text-align: left;
+}
+.Carrusel::scroll-button(*) {
+  border: 0;
+  font-size: 2rem;
+  background: none;
+  color: black;
+  opacity: 0.7;
+  cursor: pointer;
+  position: absolute;
+  position-anchor: --my-carousel;
+}
+
+.Carrusel::scroll-button(*):hover,
+.Carrusel::scroll-button(*):focus {
+  opacity: 1;
+}
+
+.Carrusel::scroll-button(*):active {
+  translate: 1px 1px;
+}
+
+.Carrusel::scroll-button(*):disabled {
+  opacity: 0.2;
+  cursor: unset;
+}
+.Carrusel::scroll-button(left) {
+  right: calc(anchor(left) - 70px);
+  bottom: calc(anchor(top) + 13px);
+  content: "◄";
+}
+
+.Carrusel::scroll-button(right) {
+  content: "►";
+  left: calc(anchor(right) - 70px);
+  bottom: calc(anchor(top) + 13px);
+}
