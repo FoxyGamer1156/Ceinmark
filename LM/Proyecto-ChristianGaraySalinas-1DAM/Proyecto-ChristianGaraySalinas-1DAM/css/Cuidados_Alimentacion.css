@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Delius&display=swap');
+.AcordeonBotonCuidadosAlimentacion{
+    background-color: #ac9289;
+    color: black;
+}
+.AcordeonBodyCuidadosAlimentacion{
+    background-color: #ac9289;
+    color: black;
+}
+.card-text{
+    height: 10vh;
+}
+.centradoCuidado{
+    margin-left: 2vw;
+}
+.cuerpo{
+    background-color: #E8C4B8;
+    font-family: "Delius Unicase", cursive;
+    font-weight: 400;
+    font-size: 3vh;
+    font-style: normal;
+}
+.CentradoCarrusel{
+    padding-left: 6vw;
+}
+.CentradoAcordeon{
+    padding-left: 3.2vw;
+}
+.centradoAlim{
+    padding-left: 12vw;
+}
+
+/*FOTOS*/
+.GatoJabon{
+    height: 27vh;
+    width: 22vw;
+}
+.Toallitas{
+    height: 27vh;
+    width: 22vw;
+}
+.LimpiaOreja{
+    height: 35vh;
+    width: 26vw;
+}
+.GatoSol{
+    height: 36vh;
+    width: 26vw;
+}
+.Champu{
+    margin-left: 8vw;
+    height: 32vh;
+    width: 8vw;
+}
+.CremaSol{
+    margin-left: 4vw;
+    height: 32vh;
+    width: 15vw;
+}
+.Toallitas{
+    margin-left: 3.5vw;
+    height: 32vh;
+    width: 19vw;
+}
+.ComiendoPienso{
+    height: 30vh;
+    width: 27vw;
+}
+.ComiendoPollo{
+    height: 32vh;
+    width: 27vw;
+}
+.BebiendoAgua{
+    height: 30vh;
+    width: 27vw;
+}
+.Pienso{
+    margin-left: 4vw;
+    height: 35vh;
+    width: 17vw;
+}
+.Bebedero{
+    height: 35vh;
+    width: 27vw;
+}

@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Delius&display=swap');
+.cuerpo{
+    background-color: #E8C4B8;
+    font-family: "Delius Unicase", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+.TamanoTexto{
+    font-size: 1.5em;
+}
+.card-text{
+    height: 25vh;
+}
+.CentradoCards{
+    padding-left: 12vw;
+}
+/*FOTOS*/
+.Sphynx{
+    height: 40vh;
+    width:  25vw;
+}
+.Bambino{
+    height: 40vh;
+    width: 29.9vw;
+}
+.Dwelf{
+    height: 30vh;
+    width: 29.8vw;
+}
+.Elfo{
+    height: 30vh;
+    width: 29.8vw;
+}

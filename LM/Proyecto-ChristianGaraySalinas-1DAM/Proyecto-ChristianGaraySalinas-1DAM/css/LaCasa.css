@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Delius&display=swap');
+.cuerpo{
+    background-color: #E8C4B8;
+    font-family: "Delius Unicase", cursive;
+    font-weight: 400;
+    font-size: 3vh;
+    font-style: normal;
+
+}
+.CentradoCarrusel{
+    padding-left: 6vw;
+}
+.card-text{
+    height: 10vh;
+}
+.CentradoTexto{
+    padding-left: 3vw;
+}
+/*FOTOS*/
+.Flecha{
+    width: 3.5vw;
+    height: 3.5vh;
+}
+.Basico{
+    width: 26vw;
+    height: 26vh;
+}
+.CalorGato{
+    width: 32vw;
+    height: 33vh;
+}
+.Rascador{
+    width: 30vw;
+    height: 30vh;
+}
+
