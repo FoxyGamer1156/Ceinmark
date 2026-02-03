@@ -1,0 +1,176 @@
+Select: se meten los datos que se quieren obtener cada nombres va separado por comas(,).
+
+From: se meten las tablas de las que queremos obtener infromación. Se separan con coams(,).
+
+Where: Sirve para filtrar los datos que queremos obtener.
+
+Order By: sirve para ordenar por un campo determinado. Puede ser ASC o DESC. Se separan con comas.
+
+
+Select:
+    - Se debe anteponer el nombre de la tabla cuando hay más de una tabla FROM
+      nombresTabla.nombreColumna
+    - Si queremos incluir todas las columnas podemos poner: SELECT*.
+    - Podemos darle un añoas a cada columna para que éste se muestre en la tabla resultante.
+      SELECT id_empleado "codigo de emeplado".
+
+From:
+    - Aquí se definen los nombres de las tablas de las que proceden las columnas del SELECT.
+    - Se pueden definir alias para las tablas:
+        Select u.nombre
+        From Usuarios u;
+
+Where:
+    - Los registros resultantes deben cumplir la/las condicion/es que can en el WHERE.
+    - Se utilizan operadores de comparación, operadores aritméticos, operadores de concatenación y operadores lógicos,
+      funciones o expresiones para filtrar la consulta.
+    - Si queremos obtener los nombres de los usuarios que son mujeres:
+      Select nombre
+      From Usuarios
+      Where sexo='M';
+
+Order By:
+  - Se usa para que aparezcan ordenados los resultados de una consulta.
+    - Se puede ordenar en orden ascendente(ASC) o descendente(DESC).
+    - Por defecto, la ordenación es ascendente.
+    - Es posible ordenar por más de una columna.
+      Select nombre,apellido
+      From Usuarios
+      Order by apellidos, nombre;
+
+Operadores de comparativos:
+  = : igualdad.
+  > : mayor.
+  < : menor.
+  >= : mayor igual
+  <= : menor igual
+  != : distinto
+    Select nombre
+    From Empleados
+    Where nombre != 'Oscar';
+
+IN(valor1, valor2,..., valorN): igual que cualquiera de los miembros.
+NOT IN(valor1, valor2,..., valorN): distinto que los miembros entre paréntesis.
+  Select nombre,ciudad
+  From Empleadoswhere ciudad in('Madrid', 'Barcelona');
+
+BETWEEN valor1 and valor2: contenido dentro del rango.
+NOT BETWEEN valor1 and valor2: no contenido dentro del rango.
+  Select nombre, añoNacimiento
+  From EmpleadosWhere añoNac BETWEEN 1970 and 1990;
+                      añoNac >= 1970 and añoNac<=1990;
+
+LIKE 'abc%': se utiliza contextos para obtener columnas cuyo valor en un campo cumpla una condición textual.
+El '%' sustituye a una cadena de caracteres y el guión bajo "_" sustituyr a un único carácter.
+NOT LIKE '_a%': lo contrario.
+  Select nombre
+  From Usuarios
+  Where nombres LIKE 'R%';
+
+IS NULL: devuleve verdadero si el valor del campo de la fila que examina es nulo.
+IS NOT NULL: devuleve verdadero si el valor del campo de la fila que examina NO es nulo.
+  Select nombre,apellido
+  From Empleados
+  Where Apellido IS NULL;
+
+Diferencias entre LIKE y '=':
+  El operador "LIKE" se utiliza en comparaciones de cadenas de caractares con un patrón de búsqueda.
+  Mientras que el operador '=' buscaría cadenas de caracteres idénticas, el operador "LIKE" busca cadenas de caracteres
+  que contengan la porción de la cadena indicada.
+
+Operadores Lógicos:
+  AND: devuelve verdadero si sus expresiones a derecha e izquierda son ambas verdaderas.
+    Select año
+    From Empleados
+    Where año>1970 and año<1990;
+  OR: devuelve verdadero si alguna de sus expresiones a derecha e izquierda  son verdaderas.
+    Select año
+    From Empleados
+    Where año>1970 OR año=1950;
+  NOT: invierte la lógica de la expresión que le precede.
+    Select año
+    From Empleados
+    Where NOT(año > 1970);
+
+Consultas calculadas:
+  Consiste en añadir un operador(+,-,*,/) a un atributo en la sentencia SELECT. Teniendo esta tabla:
+    |Empleado(nombre, salarioMensual)|
+  Si se pide el salario anual de los empleados se haría la sihuente consulta:
+    Select nombre,salario*12 AS salarioAnual from Emplados;
+  Resulado:
+  |Nombres|SalarioAnual|
+  |--------------------|
+  |Oscar  |12000       |
+  |Sebas  |13000       |
+  |Izan   |33000       |
+
+  Si tuvieramos:
+    |Emplados(nombre, sueldoMensual, pagaExtra)|
+  Y quisieramos saber el sueldo anual con la paga extra:
+    Select nombre,sueldoMensual*12+pagaExtra AS sueldoReal from Emplados;
+  Resultado:
+    |Nombre|sueldoReal|
+    |-----------------|
+    |Oscar |14000     |
+    |Sebas |15500     |
+    |Izan  |43000     |
+  
+Funciones numéricas:
+  - Se pueden incluir en las sentencias Select, Where y Order By.
+  - Trabajan con atributos de tipo numérico.
+  ABS(n): calcula el número absoluto de un número 'n'.
+  Exp(n): calcula e^n.
+  CEIL(n): calcula valor entero inmediatamente superior o igual a 'n'.
+  FLOOR(n): calcula el valor entero inmediatamente inferior o igual a 'n'.
+  MOD(m,n): calcula el resto resulyamye de dividir 'm' entre 'n' (m/n).
+  POWER(valor, exponente): eleva el "valor" al "exponente" indicado.
+  ROUND(n, decimales): redondea el número 'n' al siguiente número con el número de
+                       "decimales" que se indican.
+  SQRT(n): calcula la raíz cuadrada de 'n'.
+  TRUNCATE(m,n): trunca el número 'm' a la cantidad de decimales especificada
+                 en 'n'. Si se omite el segundo argumento, se truncan todos los
+                 decimales. Si 'n' es negativo, el número es truncado desde la parte
+                 entera. Ej: Truncate(231,-2) = 200.
+  SIGN(n): si el argumento 'n' es un valor positivo, retorna 1, si es negativo, retorna -1;
+           y 0 si es 0.
+
+Funciones de cadena de caracteres:
+  Para los atributos de tipo texto.
+  CHAR(n): devuelve el caracter cuyo valor condificado es 'n'. Ej: CHAR(81) = a.
+  ASCII(n): devuelve el valor ASCII de 'n'. Ej: ASCII('e') = 101.
+  CONCAT(cad1,cad2,...): devuelve las dos o más cadenas unidas. Es equivalente al
+                         operador "||", pero este operador no se usa en MySQL.
+                         Ej: concat(nombre,' ', apodo)
+  LOWER(cad) o LCASE(cad): devuleve la cadena 'cad' contados sus caracteres en minúsculas.
+  UPPER(cad) o UCASE(cad): devuelve  la cadena 'cad' con todos sus caracteres en mayúsculas.
+  LPAD(cad1,n,cad2): devuelve 'cad1' con longitud 'n' ajustada a la derecha, rellenado por la 
+                     izquierda con 'cad2'. Ej: LPAD('m',5,'*') = ****m.
+  RPAD(cad1,n,cad2): devuelve 'cad1' con longitud 'n' ajustada a la izquierda, rellenando por la
+                     derecha con 'cad2'. Ej: RPAD('m',5,'*') = m****.
+  REPLACE(cad,ant,nue): devuelve 'cad' en la que cada ocurrencia de la cadena "ant" ha sido sustituida
+                        por la cadena 'nue'. Ej: REPLACE('semana','a','i') = semini.
+  SUBSTR(cad,m,n) o SUBSTRING(cad,m,n): devuelve la cadena 'cad' compuesta por 'n' caracteres a partir de
+                                        la posición 'm'. La primera posoción es 1. Ej: SUBSTR("HOLA",2,2) = OL.
+  LENGTH(cad): devuelve la longitud de la 'cad' en byte.
+  TRIM(cad): elimina los espacion en blanco a la izquierda y a la derecha(inicio/fin) de 'cad'.
+  LTRIM(cad): elimina solo el espacio de la izquierda de la cadena 'cad'.
+  RTRIM(cad): elimina solo el espacion de la derecga de la cadena 'cad'.
+  INSTR(cad,cadBuscada[ ,posInicial,nAparición]): obtiene la posición en la que se encuentra 'cadBuscada' en la
+                                                  cadena 'cad'. Opcionalmente, se puede comenzar a buscar desde
+                                                  una posición inicial  concreta (posInicial) e indicar el número
+                                                  apariciones de la cadena buscada.
+                                                  Si no encuentra nada, devuelve un cero.
+                                                  INSTR('semana','a',1,2) = 4,6.
+
+Funciones de manejo de fechas:
+  DATE: almacena fechas sin incluir hora.
+  TIMESTAMP: alamacena fechas incluyendo la hora.
+  NOW() o CURRENT_TIMESTAMP() o SYSDATE() o CURRENT_DATE: devuelve la fecha y hora actuales.
+  DATE_ADD(fecha,INTERVAL n MONTH): añade a la 'fecha' el númeo de meses indicado en 'n'.
+  TIMESTAMPDIFF(MONTH,fecha1,fecha2) devuelve el número de meses que hay entre 'fecha1' y 'fecha2'.
+  LAST_DAY(fecha): devuelve el último día del mes al que pertene la 'fecha'. El valor devuelto es de tipo DATE.
+  EXTRACT(valor FROM fecha): extrae un valor de una fecha ocncreta. El valor puede ser day,month, year, hour,etc.
+
+Los operadores aritméticos(+ y -) pueden emplearse para las fechas:
+  |Select now() - INTERVAL 5 DAY|
+Devuelve la fecha correspodiente a 5 días antes de la fecha actual.

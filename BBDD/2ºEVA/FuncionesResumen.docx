@@ -1,0 +1,79 @@
+Funciones Resumen;
+    Devuelven un único calor:
+    SUM(expresión):
+        Devuelve la suma de todos los valores del atributo "Expresión".
+        Suma de los salarios de los empleados:
+            Select SUM(Salario) From empleados
+    
+    Count(expresión):
+        Cuenta el número de registros del atributo "Expresión". No cuenta los atributos con valor null 
+        a menos que expresión sea *.
+        Numero total de empleados:
+            Select cound(id) from empleados
+
+    Min(expresión):
+        Devuelve el valor mínimo de la expresión sin considerar los null.
+        Salario minimo:
+            Select min(salario) from empleados
+
+    Max(expresión):
+        Devuelve el valor máximo de la expresión.
+    
+    AVG(expresión):
+        Devuelve el promedio de los valores de un grupo, omitiendo los null.
+        Media de salario:
+            Select AVG(salario) from empleados
+    
+    Variance(expresión):
+        Devuelve la varianza estadística de todos los valores de la expresión. Los null se omiten.
+    
+    STD(expresión):
+        Devuelve la desviación típica estadística de todos los valores de la expresión. Los null se omiten.
+    
+    IFNULL(expr1,expr2):
+        Devuelve el primer argumento si no es null. En caso contrario, devuelve el segundo argumento.
+        Select codigo_producto, IFNULL(precio, 0) from productos;
+    
+    IF(condición, expr1,expr2):
+        Devuelve expr1 si la condición es verdadera o expr2 si la condición es falsa.
+        Select nombre, IF(comision>5, 1, 0) from empleados;
+    
+    NULLIF(expr1,expr2):
+        Compara expr1 con expr2. Si son iguales retorna null, sino, retorna expr1.
+      +---------------------------------+
+      | case                            |
+      |     when condicion1 then res1   |     "res" representa el valor devuelto si "condición"
+      |     when condicion2 then res2   |     se cumple. Si existen valores que no cumplen
+      |     ----                        |---->las condiciones anteriores, se ejecuta el "else".
+      |     ----                        |     Se pueden usar el Select, Update y Order By.
+      |     else renN                   |
+      |     end                         |
+      +---------------------------------+
+    Ejemplo de Select:
+        Select nombre_producto, case
+            When stock>0 then 'En stock'
+            Else 'Sin stock'
+            End as estado_de_stock
+        From Productos;
+    Ejemplo de Update:
+        Update empleados
+            Set categoria_salarial = 
+            Case
+                When salary>5000 then 'Salario Alto'
+                Else 'Salario bajo'
+            End;
+    Ejemplo de Order By:
+        Select id_pedidio,fecha_pedidio
+        From Pedidos
+        Order By Case
+            When estado='pendiente' then 1
+            When estado='entregando' then 2
+            Else 3
+        End;
+    Categorizar a los empleados por su salario:
+        Select nombre_empleado, Case
+            When salario>5000 then 'Salario alto'
+            When salario between 3000 and 5000 then 'Salario medio'
+            Else 'Salario bajo'
+            End as categoría categoria_salarial
+        From empleados;
