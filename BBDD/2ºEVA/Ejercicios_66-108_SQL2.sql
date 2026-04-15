@@ -131,7 +131,7 @@ select current_date(), last_day(current_date());
 select fecha_pedido, extract(year from fecha_pedido)'AÑO PEDIDO', extract(month from fecha_pedido)'MES PEDIDO' from temu.pedidos;
 
 -- Ejercicio 94
-select * from temu.pedidos where extract(year from fecha_pedido) = extract(year from sysdate());
+select pedidos from temu.pedidos where extract(year from fecha_pedido) = extract(year from sysdate());
 
 -- Ejercicio 95
 select sum(salario)'Suma total de salario' from temu.empleados;
