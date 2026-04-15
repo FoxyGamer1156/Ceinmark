@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<museo_tanques>
+    <naciones>
+      <america>
+        <sherman></sherman>
+      </america>
+      <alemania>
+        <pz></pz>
+      </alemania>
+      <inglaterra>
+        <mark></mark>
+      </inglaterra>
+      <japon>
+        <chi></chi>
+      </japon>
+      <chekos>
+        <skoda></skoda>
+      </chekos>
+      <suecia>
+        <udes></udes>
+      </suecia>
+      <francia>
+        <batch></batch>
+      </francia>
+      <urss>
+        <is></is>
+      </urss>
+    </naciones>
+</museo_tanques>

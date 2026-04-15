@@ -1,0 +1,216 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE familias [
+  <!ELEMENT familias (familia)+>
+  <!ELEMENT familia (progenitores, descendencia)>
+  <!ELEMENT progenitores ( (ama | aita)?, (ama | aita)?)>
+  <!ELEMENT descendencia (hija|hijo)+>
+  <!ELEMENT ama (nombre, apellido1,apellido2,mail,telefono)>
+  <!ELEMENT aita (nombre, apellido1,apellido2,mail,telefono)>
+  <!ELEMENT hijo (nombre, apellido1,apellido2,mail,telefono)>
+  <!ELEMENT hija (nombre, apellido1,apellido2,mail,telefono)>
+  <!ELEMENT nombre (#PCDATA)>
+  <!ELEMENT apellido1 (#PCDATA)>
+  <!ELEMENT apellido2 (#PCDATA)>
+  <!ELEMENT mail (#PCDATA)>
+  <!ELEMENT telefono (#PCDATA)>
+  <!ATTLIST familia id ID #REQUIRED>
+  <!ATTLIST ama nif ID #REQUIRED>
+  <!ATTLIST aita nif ID #REQUIRED>
+  <!ATTLIST hija nif ID #REQUIRED>
+  <!ATTLIST hijo nif ID #REQUIRED>
+]>
+<familias>
+    <familia id="F001"> <!-- Familia con hijos pero sin padres -->
+        <progenitores>
+        </progenitores>    
+        <descendencia>
+            <hija nif="A12345678">
+                  <nombre>Leire</nombre>
+                  <apellido1>Aspiazu</apellido1>            
+                  <apellido2>Askain</apellido2>
+                  <mail>leire@gmail.com</mail>
+                  <telefono>600100100</telefono>
+            </hija>
+            <hija nif="B12345679">
+                  <nombre>Jone</nombre>
+                  <apellido1>Astigarraga</apellido1>            
+                  <apellido2>Txastin</apellido2>
+                  <mail>jone@gmail.com</mail>
+                  <telefono>600100101</telefono>
+            </hija>
+            <hijo nif="A12345677">
+                  <nombre>Jon</nombre>
+                  <apellido1>Landaluce</apellido1>            
+                  <apellido2>Mirain</apellido2>
+                  <mail>jon@gmail.com</mail>
+                  <telefono>600100102</telefono>
+            </hijo>
+        </descendencia>
+    </familia>
+    <!-- Familia con hija-hijo pero con un solo progenitor (ama) -->
+    <familia id="F002">
+        <progenitores>
+              <ama nif="W00000001">
+                  <nombre>Jaione</nombre>
+                  <apellido1>Landeras</apellido1>            
+                  <apellido2>Cantero</apellido2>
+                  <mail>jaione@gmail.com</mail>
+                  <telefono>700100100</telefono>
+              </ama>        
+        </progenitores>
+        <descendencia>
+              <hija nif="Q44444444">
+                  <nombre>Miren</nombre>
+                  <apellido1>Marquez</apellido1>            
+                  <apellido2>Laun</apellido2>
+                  <mail>miren@gmail.com</mail>
+                  <telefono>600600600</telefono>              
+              </hija>        
+        </descendencia>    
+    </familia>
+    <!-- familia con solo aita -->
+      <familia id="F003">
+        <progenitores>
+              <aita nif="K00000111">
+                  <nombre>Jan</nombre>
+                  <apellido1>Cumbre</apellido1>            
+                  <apellido2>Centeno</apellido2>
+                  <mail>jan@gmail.com</mail>
+                  <telefono>700700700</telefono>
+              </aita>        
+        </progenitores>
+        <descendencia>
+              <hija nif="S55667788">
+                  <nombre>Mireia</nombre>
+                  <apellido1>Martin</apellido1>            
+                  <apellido2>Langueriz</apellido2>
+                  <mail>mireia@gmail.com</mail>
+                  <telefono>700800900</telefono>              
+              </hija>        
+        </descendencia>    
+    </familia>
+    
+  <!-- Familia con dos amas -->
+        <familia id="F004">
+        <progenitores>
+              <ama nif="D99887766">
+                  <nombre>Janire</nombre>
+                  <apellido1>Larcenas</apellido1>            
+                  <apellido2>Cantauri</apellido2>
+                  <mail>janire@gmail.com</mail>
+                  <telefono>700200100</telefono>
+              </ama>
+              <ama nif="T88887766">
+                  <nombre>Itxaso</nombre>
+                  <apellido1>Jauregui</apellido1>            
+                  <apellido2>Jauregui</apellido2>
+                  <mail>itxaso@gmail.com</mail>
+                  <telefono>700200400</telefono>
+              </ama>       
+        </progenitores>
+        <descendencia>
+              <hijo nif="Q44554444">
+                  <nombre>Markel</nombre>
+                  <apellido1>Larcenas</apellido1>            
+                  <apellido2>Jauregui</apellido2>
+                  <mail>markel@gmail.com</mail>
+                  <telefono>600600600</telefono>              
+              </hijo>        
+        </descendencia>    
+    </familia>
+    
+    <!-- Familia de dos aitas -->
+    <familia id="F005">
+        <progenitores>
+            <aita nif="C88887755">
+                <nombre>Julen</nombre>
+                <apellido1>Martinez</apellido1>            
+                <apellido2>Perez</apellido2>
+                <mail>julen@gmail.com</mail>
+                <telefono>700800400</telefono>
+             </aita>
+             <aita nif="E88887777">
+                <nombre>Karmelo</nombre>
+                <apellido1>Martinez</apellido1>            
+                <apellido2>Marquez</apellido2>
+                <mail>julen@gmail.com</mail>
+                <telefono>700800910</telefono>
+             </aita>
+        </progenitores>
+        <descendencia>
+              <hija nif="Q44555544">
+                  <nombre>Rosa</nombre>
+                  <apellido1>Martinez</apellido1>            
+                  <apellido2>Martinez</apellido2>
+                  <mail>rosa@gmail.com</mail>
+                  <telefono>600111111</telefono>              
+              </hija>
+        </descendencia>    
+    </familia>
+    
+    <!-- Familia con dos progenitores (ama-aita) -->
+        <familia id="F006">
+        <progenitores>
+            <ama nif="U88887755">
+                <nombre>Julia</nombre>
+                <apellido1>Herraez</apellido1>            
+                <apellido2>Perez</apellido2>
+                <mail>julia@gmail.com</mail>
+                <telefono>700800410</telefono>
+             </ama>
+             <aita nif="H88887777">
+                <nombre>Carruncio</nombre>
+                <apellido1>Gutierrez</apellido1>            
+                <apellido2>Arques</apellido2>
+                <mail>carruncio@gmail.com</mail>
+                <telefono>777800910</telefono>
+             </aita>
+        </progenitores>
+        <descendencia>
+              <hija nif="B878787878">
+                  <nombre>Haizea</nombre>
+                  <apellido1>Gutierrez</apellido1>            
+                  <apellido2>Herraez</apellido2>
+                  <mail>rosa@gmail.com</mail>
+                  <telefono>600711111</telefono>              
+              </hija>
+        </descendencia>    
+    </familia>
+    
+    <!-- Familia con dos figuras paternas (aita-ama) -->
+    
+    <familia id="F014">
+      <progenitores>
+          <aita nif="C88887753">
+              <nombre>Pantxo</nombre>
+                  <apellido1>Caceres</apellido1>            
+                  <apellido2>Leon</apellido2>
+                  <mail>pantxo@gmail.com</mail>
+                  <telefono>600991111</telefono>
+          </aita>
+          <ama nif="D99887761">
+                <nombre>Jana</nombre>
+                <apellido1>Ruiz</apellido1>            
+                <apellido2>Lopez</apellido2>
+                <mail>jana@gmail.com</mail>
+                <telefono>600711199</telefono>
+          </ama>
+      </progenitores>
+      <descendencia>
+          <hija nif="A12345679">
+              <nombre>Patricia</nombre>
+              <apellido1>Caceres</apellido1>            
+              <apellido2>Ruiz</apellido2>
+              <mail>patricia@gmail.com</mail>
+              <telefono>600788888</telefono>  
+          </hija>
+          <hijo nif="Q44554447">
+              <nombre>Patricio</nombre>
+              <apellido1>Caceres</apellido1>            
+              <apellido2>Ruiz</apellido2>
+              <mail>patricio@gmail.com</mail>
+              <telefono>606799609</telefono>
+          </hijo>
+      </descendencia>    
+    </familia>
+</familias>

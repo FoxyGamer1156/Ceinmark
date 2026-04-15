@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<caballos xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../XSD/XSD1.xsd">
+  <caballo>
+    <nombre>Silvestre</nombre>
+    <raza>Morgan</raza>
+    <edad/>
+  </caballo>
+  <caballo>
+   <nombre>Rocinante</nombre>
+   <raza>Hispano frances</raza>
+   <edad/>
+  </caballo>
+</caballos>

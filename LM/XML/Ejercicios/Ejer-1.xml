@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!--OPCIÓN A: modificar solo el DTD-->
+<!DOCTYPE perifericos [
+    <!ELEMENT perifericos (periferico)+>
+    <!ELEMENT periferico (#PCDATA)>
+]>
+
+<perifericos>
+   <periferico>impresora</periferico>
+   <periferico>monitor</periferico>
+   <periferico>teclado</periferico>
+</perifericos>
+<!--OPCIÓN B: modificar el XML
+<?xml version="1.0" encoding="UTF-8"?>
+  <!DOCTYPE perifericos [
+      <!ELEMENT perifericos (#PCDATA)>
+  ]>
+
+<perifericos>Hola</perifericos>-->

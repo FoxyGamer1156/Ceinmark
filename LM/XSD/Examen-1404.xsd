@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+<!-- Elementos simples definidos por el usuario -->
+    <xs:simpleType name="formato_titulo_subtitulo_descripcion">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[A-Z_0-9]{3,}"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="formato_nombre">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[A-ZÁÉÍÓÚ]{1,2}[a-záéíóúü]{1,}((\s|-)[A-ZÁÉÍÓÚ]{1,2}[a-záéíóúü]{1,})*"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="vacios">
+        <xs:restriction base="xs:string">
+            <xs:length value="0"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="formato_color">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="#(([0-9]|[A-F]){2}){3}"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="formato_noticia_id">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="X-Z]{2}[0-9]{4}"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="formato_email">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="formato_imagen">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[A-Z-a-z-0-9]+(.)((jpg)|(png)|(webp))"/>
+        </xs:restriction>
+    </xs:simpleType>
+<!-- Elementos simples -->
+<xs:element name="descripcion" type="formato_titulo_subtitulo_descripcion"/>
+
+<xs:element name="color" type="formato_color"/>
+
+<xs:element name="tamanno" type="xs:positiveInteger"/>
+
+<xs:element name="titulo" type="formato_titulo_subtitulo_descripcion"/>
+
+<xs:element name="nombre" type="formato_nombre"/>
+
+<xs:element name="subtitulo_canal" type="formato_titulo_subtitulo_descripcion"/>
+
+<xs:element name="titulo_canal" type="formato_titulo_subtitulo_descripcion"/>
+<!-- Atributos -->
+<xs:attribute name="href" type="xs:anyURI"/>
+
+<xs:attribute name="id" type="formato_noticia_id"/>
+
+<xs:attribute name="rederencia" type="xs:anyURI"/>
+
+<xs:attribute name="altura" type="xs:positiveInteger"/>
+
+<xs:attribute name="anchura" type="xs:positiveInteger"/>
+
+<!-- Elementos compuestos por el usuario -->
+<xs:element name="link">
+    <xs:complexType>
+        <xs:simpleContent>
+            <xs:extension base="vacio">
+                <xs:attribute ref="href" use="required"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+</xs:element>
+
+<xs:element name="enlace">
+    <xs:complexType>
+        <xs:simpleContent>
+            <xs:extension base="vacio">
+                <xs:attribute ref="referencia" use="required"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+</xs:element>
+<xs:element name="imagen">
+    <xs:complexType>
+        <xs:simpleContent>
+            <xs:extension base ="formato_imagen">
+                <xs:attribute ref="altura" use="optional"/>
+                <xs:attribute ref="anchura" use="optional"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+</xs:element>
+
+<!-- Elementos compuestos -->
+<xs:element name="visualizar">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element ref="tamanno"/>
+            <xs:element ref="color"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:element>
+<xs:element name="noticia">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element ref="titulo"/>
+            <xs:element ref="enlace"/>
+            <xs:element ref="imagen"/>
+            <xs:element ref="visualizar" minOccurs="0" maxOccurs="1"/>
+            <xs:element ref="descripcion"/>
+        </xs:sequence>
+        <xs:attribute ref="id" use="required"/>
+    </xs:complexType>
+</xs:element>
+
+<xs:element name="director">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element ref="nombre"/>
+            <xs:element ref="email"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:element>
+
+<xs:element name="canal">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element ref="titulo_canal"/>
+            <xs:element ref="subtitulo_canal"/>
+            <xs:element ref="link"/>
+            <xs:element ref="director"/>
+            <xs:element ref="id"/>
+            <xs:element ref="noticia" minOccurs="1" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:element>
+</xs:schema>

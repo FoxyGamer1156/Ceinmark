@@ -1,0 +1,50 @@
+﻿<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+<!-- Elementos simples definidos por el usuario -->
+    <xs:simpleType name="tipo_edad">
+        <xs:restriction base="xs:string">
+            <xs:length value="0"/>
+        </xs:restriction>
+    </xs:simpleType>
+<!-- Elementos simples -->
+    <xs:element name="nombre">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:minLength value="3"/>
+                <xs:maxLength value="35"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+    <xs:element name="raza">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:minLength value="3"/>
+                <xs:maxLength value="35"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+    <xs:element name="edad" type="tipo_edad"/>
+<!-- Atributos -->
+
+<!-- Elementos compuestos definidos por el usuario -->
+
+
+<!-- Elementos compuestos -->
+    <xs:element name="caballo">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="nombre"/>
+                <xs:element ref="raza"/>
+                <xs:element ref="edad"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="caballos">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="caballo" minOccurs="1" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

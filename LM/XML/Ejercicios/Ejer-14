@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pedidos [
+  <!ELEMENT pedidos (pedido)+>
+  <!ELEMENT pedido ((empresa | cliente),productos,fecha,factura?)>
+  <!ELEMENT empresa (denominacion)>
+  <!ELEMENT productos (producto)+>
+  <!ELEMENT factura (emisor,total,fecha)>
+  <!ELEMENT denominacion (#PCDATA)>
+  <!ELEMENT empresa (#PCDATA)>
+  <!ELEMENT cliente (#PCDATA)>
+  <!ELEMENT producto (#PCDATA)>
+  <!ELEMENT fecha (#PCDATA)>
+  <!ATTLIST empresa CIF ID #REQUIRED>
+  <!ATTLIST empresa sector NMTOKEN #REQUIRED>
+  <!ATTLIST empresa actividad NMTOKENS #REQUIRED>
+  <!ATTLIST cliente NIF ID #REQUIRED>
+  <!ATTLIST producto codigo ID #REQUIRED>
+  <!ATTLIST factura numfactura ID #REQUIRED>
+  <!ATTLIST factura cliente IDREF #REQUIRED>
+  <!ATTLIST factura productos IDREFS #REQUIRED>
+]>
+
+<pedidos>
+  <pedido>
+    <empresa CIF="a221sdd31" sector="Tecnologico" actividad="frecuente">
+      <denominacion>Formentera SL</denominacion>
+    </empresa>
+    <productos>
+      <producto codigo="pp0v0ñaldá">Bolis</producto>
+    </productos>
+    <fechas>01-12-2020</fechas>
+    <factura numfactura="" cliente="a221sdd31" productos="pp0v0ñaldá">
+      <emisor></emisor>
+      <total></total>
+      <fecha></fecha>
+    </factura>
+  </pedido>
+</pedidos>

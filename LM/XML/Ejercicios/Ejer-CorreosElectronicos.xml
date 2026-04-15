@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!--Una empresa de jostin nos solicita crear un sistema de almacenamiento de correos electronicos.
+Crear un dtd y al menos 3 ejemplo de correo electronico, para comprobar la validades del DTD.-->
+<!DOCTYPE correoselectronicos [
+  <!ELEMENT correoselectronicos (correoelectronico)+>
+  <!ELEMENT correoelectronico (emisor,receptores,asunto,mensaje, adjuntos?)>
+  <!ELEMENT receptores (receptor)+>
+  <!ELEMENT adjuntos (adjunto)+>
+  <!ELEMENT emisor (#PCDATA)>
+  <!ELEMENT receptor (#PCDATA)>
+  <!ELEMENT asunto (#PCDATA)>
+  <!ELEMENT mensaje (#PCDATA)> 
+  <!ELEMENT adjuntos (#PCDATA)>
+  <!ATTLIST correoelectronico id ID #REQUIRED>
+  <!ATTLIST receptor tipo (Para | Cc | Cco) #REQUIRED>
+]>
+<correoselectronicos>
+  <correoelectronico id="L45878582">
+    <emisor>jose.anton@yahoo.com</emisor>
+    <receptores>
+      <receptor tipo="Para">jesus@ceinmark.com</receptor>
+    </receptores>
+    <asunto>Nota</asunto>
+    <mensaje>Buenos dias, Jesus:
+      ¿Podria enviarme un PDF con las notas que he tenido en esta evaluación?
+      Estare espernado su repuesta</mensaje>
+  </correoelectronico>
+    <correoelectronico id="A1724981J">
+    <emisor></emisor>
+    <receptores>
+      <receptor tipo="Cc"></receptor>
+      <receptor tipo="Cco"></receptor>
+    </receptores>
+    <asunto></asunto>
+    <mensaje></mensaje>
+    <adjuntos>
+      <adjunto></adjunto>
+      <adjunto></adjunto>
+    </adjuntos>
+  </correoelectronico>
+  <correoelectronico id="R78417894">
+    <emisor></emisor>
+    <receptores>
+      <receptor tipo="Cc"></receptor>
+    </receptores>
+    <asunto></asunto>
+    <mensaje></mensaje>
+  </correoelectronico>
+</correoselectronicos>

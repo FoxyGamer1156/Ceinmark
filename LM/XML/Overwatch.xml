@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE personajes [
+  <!ELEMENT personajes (personaje)+>
+  <!ELEMENT personaje (nombre,arma,estatura,ulti_linea,rol)>
+  <!ELEMENT nombre (#PCDATA)>
+  <!ELEMENT arma (#PCDATA)>
+  <!ELEMENT estatura (#PCDATA)>
+  <!ELEMENT ulti_linea (#PCDATA)>
+  <!ELEMENT rol (#PCDATA)>
+]>
+<personajes>
+    <personaje>
+        <nombre>Tracer</nombre>
+        <arma>Pistolas de pulso</arma>
+        <estatura>1.63 m</estatura>
+        <ulti_linea>Time's up!</ulti_linea>
+        <rol>Daño</rol>
+    </personaje>
+
+    <personaje>
+        <nombre>Reinhardt</nombre>
+        <arma>Martillo cohete</arma>
+        <estatura>2.23 m</estatura>
+        <ulti_linea>Hammer down!</ulti_linea>
+        <rol>Tanque</rol>
+    </personaje>
+
+    <personaje>
+        <nombre>Mercy</nombre>
+        <arma>Bastón caduceo</arma>
+        <estatura>1.70 m</estatura>
+        <ulti_linea>Helden sterben nie!</ulti_linea>
+        <rol>Soporte</rol>
+    </personaje>
+
+    <personaje>
+        <nombre>Genji</nombre>
+        <arma>Shurikens</arma>
+        <estatura>1.73 m</estatura>
+        <ulti_linea>Ryujin no ken wo kurae!</ulti_linea>
+        <rol>Daño</rol>
+    </personaje>
+
+    <personaje>
+        <nombre>D.Va</nombre>
+        <arma>Cañones de fusión</arma>
+        <estatura>1.65 m</estatura>
+        <ulti_linea>Nerf this!</ulti_linea>
+        <rol>Tanque</rol>
+    </personaje>
+
+    <personaje>
+        <nombre>Widowmaker</nombre>
+        <arma>Rifle de francotirador</arma>
+        <estatura>1.75 m</estatura>
+        <ulti_linea>Personne n’échappe à mon regard</ulti_linea>
+        <rol>Daño</rol>
+    </personaje>
+
+    <personaje>
+        <nombre>Lucio</nombre>
+        <arma>Cañón de sonido</arma>
+        <estatura>1.72 m</estatura>
+        <ulti_linea>Vamo esculachar!</ulti_linea>
+        <rol>Soporte</rol>
+    </personaje>
+</personajes>

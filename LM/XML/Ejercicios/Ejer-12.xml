@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE peliculas [
+  <!ELEMENT peliculas (pelicula)+>
+  <!ELEMENT pelicula (((titulo,director) | (director,titulo)),autor+)>
+  <!ELEMENT titulo (#PCDATA)>
+  <!ELEMENT director (#PCDATA)>
+  <!ELEMENT autor (#PCDATA)>
+]>
+<peliculas>
+  <pelicula>
+    <titulo>Con faldas y a lo loco</titulo>
+    <director>Billy Wilder</director>
+    <autor>Bartolín</autor>
+    <autor>Bartolo</autor>
+  </pelicula>
+  <pelicula>
+    <director>Leo McCarey</director>
+    <titulo>Sopa de ganso</titulo>
+    <autor>Bartolete</autor>
+  </pelicula>
+</peliculas>

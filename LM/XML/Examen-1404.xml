@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!--<!DOCTYPE canal [
+  <!ELEMENT canal (titulo_canal,subtitulo_canal,link,director,id,noticia+)>
+  <!ELEMENT director (nombre, email)>
+  <!ELEMENT noticia (titulo, enlace, imagen, visualizar?, descripcion)>
+  <!ELEMENT visualizar (tamanno, color)>
+  
+  <!ELEMENT titulo_canal (#PCDATA)>
+  <!ELEMENT subtitulo_canal (#PCDATA)>
+  <!ELEMENT link EMPTY>
+  <!ELEMENT nombre (#PCDATA)>
+  <!ELEMENT email (#PCDATA)>
+  <!ELEMENT id (#PCDATA)>
+  <!ELEMENT titulo (#PCDATA)>
+  <!ELEMENT enlace EMPTY>
+  <!ELEMENT imagen (#PCDATA)>
+  <!ELEMENT tamanno (#PCDATA)>
+  <!ELEMENT color (#PCDATA)>
+  <!ELEMENT descripcion (#PCDATA)>
+  
+  <!ATTLIST link href CDATA #REQUIRED>
+  <!ATTLIST noticia id ID #REQUIRED>
+  <!ATTLIST enlace referencia CDATA #REQUIRED>
+  <!ATTLIST imagen altura CDATA #IMPLIED
+                                     anchura CDATA #IMPLIED>
+]>-->
+<canal xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../XSD/Examen-1404.xsd">
+          <titulo_canal>TITULO_CANAL</titulo_canal>
+          <subtitulo_canal>SUBTITULO_CANAL</subtitulo_canal>
+          <link href="http://www.example.org"/>
+          <director>
+                    <nombre>Juan Antonio</nombre>
+                    <email>lopezquesada@iessanjuanbosco.es</email>
+          </director>
+          <id>XY2356</id>
+          <noticia id="XY2589">
+                    <titulo>TITULO_NOTICIA1</titulo>
+                    <enlace referencia="http://www.example.org/2011/12/13/noticia1"/>
+                    <imagen altura="100" anchura="25">img12.jpg</imagen>
+                    <visualizar>
+                              <tamanno>12</tamanno>
+                              <color>#FF2233</color>
+                    </visualizar>
+                    <descripcion>DESC_NOTICIA1</descripcion>
+          </noticia>
+          <noticia id="XY2548">
+                    <titulo>TITULO_NOTICIA2</titulo>
+                    <enlace referencia="http://www.example.org/2011/12/13/noticia2"/>
+                    <imagen>img158.jpg</imagen>
+                    <descripcion>TITULO_NOTICIA2</descripcion>
+          </noticia>
+</canal>

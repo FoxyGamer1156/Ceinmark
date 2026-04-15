@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE alumnos [
+  <!ELEMENT alumnos (alumno+)>
+  <!ELEMENT alumno (nombre,apellidos,domicilio,telefono+,equipo?,aficiones*,origen,notas,comentario?,altura?)>
+  <!ELEMENT nombre (#PCDATA)>
+  <!ELEMENT apellidos (#PCDATA)>
+  <!ELEMENT domicilio (#PCDATA)>
+  <!ELEMENT telefono (#PCDATA)>
+  <!ELEMENT equipo (#PCDATA)>
+  <!ELEMENT aficiones (#PCDATA)>
+  <!ELEMENT notas (evaluacion)+>
+  <!ELEMENT evaluacion (calificaciones)+>
+  <!ELEMENT calificaciones (#PCDATA)>
+  <!ELEMENT origen (espanol | extranjero)>
+  <!ELEMENT espanol EMPTY>
+  <!ELEMENT extranjero EMPTY>
+  <!ELEMENT comentario (ANY)>
+  <!ELEMENT altura (#PCDATA)>
+  <!ATTLIST alumno num_alumno ID #REQUIRED>
+  <!ATTLIST alumno ayuda_num_alumno IDREF #REQUIRED>
+  <!ATTLIST alumno genero (hombre | mujer | otro) #IMPLIED>
+  <!ATTLIST telefono titular (propio | madre | padre | tutor) #IMPLIED>
+  <!ATTLIST espanol provincia CDATA #REQUIRED>
+  <!ATTLIST extranjero pais CDATA #REQUIRED>
+  <!ATTLIST calificaiones asignatura (BBDD | Programacion | Entornos | IPE | LM | Digitalizacion | Sostenibilidad) #REQUIRED>
+]>

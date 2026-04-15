@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE Tanques [
+      <!ELEMENT Tanques (Tanque)+>
+      <!ELEMENT Tanque (Modelo,nacionalidad,caracteristicas)>
+      <!ELEMENT caracteristicas (canion,blindaje,motor)>
+      <!ELEMENT canion (modelo,tamanio)>
+      <!ELEMENT blindaje (torreta,chasis)>
+      <!ELEMENT motor (marca?,modelo,caballos,fuerza)>
+      <!ELEMENT torreta (frontal,lateral,trasero)>
+      <!ELEMENT chasis (frontal,lateral,trasero)>
+      <!ELEMENT Modelo (#PCDATA)>
+      <!ELEMENT nacionalidad (#PCDATA)>
+      <!ELEMENT modelo (#PCDATA)>
+      <!ELEMENT tamanio (#PCDATA)>
+      <!ELEMENT marca (#PCDATA)>
+      <!ELEMENT caballos (#PCDATA)>
+      <!ELEMENT fuerza (#PCDATA)>
+      <!ELEMENT frontal (#PCDATA)>
+      <!ELEMENT lateral (#PCDATA)>
+      <!ELEMENT trasero (#PCDATA)>
+      
+  ]>
+<Tanques>
+  <Tanque>
+    <Modelo>Maus</Modelo>
+    <nacionalidad>Alemania</nacionalidad>
+    <caracteristicas>
+      <canion>
+        <modelo>Kw.k 44 L/55</modelo>
+        <tamanio>128mm</tamanio>
+      </canion>
+      <blindaje>
+        <torreta>
+          <frontal>260mm</frontal>
+          <lateral>210mm</lateral>
+          <trasero>210mm</trasero>
+        </torreta>
+        <chasis>
+          <frontal>280mm</frontal>
+          <lateral>185mm</lateral>
+          <trasero>160mm</trasero>
+        </chasis>
+      </blindaje>
+      <motor>
+        <marca>Mercedes Benz</marca>
+        <modelo>DB 603 A2</modelo>
+        <caballos>1950hp</caballos>
+        <fuerza>1287kW</fuerza>
+      </motor>
+    </caracteristicas>
+  </Tanque>
+  
+  <Tanque>
+    <Modelo>IS-7</Modelo>
+    <nacionalidad>URSS</nacionalidad>
+    <caracteristicas>
+      <canion>
+        <modelo>S-70</modelo>
+        <tamanio>130mm</tamanio>
+      </canion>
+      <blindaje>
+        <torreta>
+          <frontal>230mm</frontal>
+          <lateral>185mm</lateral>
+          <trasero>94mm</trasero>
+        </torreta>
+        <chasis>
+          <frontal>150mm</frontal>
+          <lateral>150mm</lateral>
+          <trasero>100mm</trasero>
+        </chasis>
+      </blindaje>
+      <motor>
+        <modelo>M-50TI</modelo>
+        <caballos>1050hp</caballos>
+        <fuerza>780kW</fuerza>
+      </motor>
+    </caracteristicas>
+  </Tanque>
+  
+  <Tanque>
+    <Modelo>M80 Patton</Modelo>
+    <nacionalidad>America</nacionalidad>
+    <caracteristicas>
+      <canion>
+        <modelo>M68</modelo>
+        <tamanio>105mm</tamanio>
+      </canion>
+      <blindaje>
+        <torreta>
+          <frontal>254mm</frontal>
+          <lateral>76.2mm</lateral>
+          <trasero>50.8mm</trasero>
+        </torreta>
+        <chasis>
+          <frontal>152.4mm</frontal>
+          <lateral>76.2mm</lateral>
+          <trasero>25.4mm</trasero>
+        </chasis>
+      </blindaje>
+      <motor>
+        <marca>Continental</marca>
+        <modelo>AVDS-1790-2D</modelo>
+        <caballos>765hp</caballos>
+        <fuerza>560kW</fuerza>
+      </motor>
+    </caracteristicas>
+  </Tanque>
+</Tanques>

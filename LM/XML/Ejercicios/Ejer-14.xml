@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pedidos [
+  <!ELEMENT pedidos (pedido)+>
+  <!ELEMENT pedido ((empresa | cliente), productos,fecha,factura?)>
+  <!ELEMENT productos (producto)+>
+  <!ELEMENT factura (emisor, total, fecha)>
+  <!ELEMENT empresa (#PCDATA)>
+  <!ELEMENT cliente (#PCDATA)>
+  <!ELEMENT producto (#PCDATA)>
+  <!ELEMENT fecha (#PCDATA)>
+  <!ELEMENT emisor (#PCDATA)> <!--AQUI DEBERIA DE IR DEFINIDO UNA ENTITY-->
+  <!ELEMENT total (#PCDATA)>
+  <!ATTLIST empresa CIF CDATA #REQUIRED>
+  <!ATTLIST empresa sector CDATA #REQUIRED>
+  <!ATTLIST empresa actividad CDATA #REQUIRED>
+  <!ATTLIST cliente NIF CDATA #REQUIRED>
+  <!ATTLIST producto cod-producto CDATA #REQUIRED>
+  <!ATTLIST producto unidades CDATA #REQUIRED>
+  <!ATTLIST factura num-factura ID #REQUIRED>
+  <!ATTLIST factura cliente_ref IDREF #REQUIRED>
+  <!ATTLIST factura productos IDREF #REQUIRED>
+  <!ENTITY MiEmpresa "Esta es mi empresa">
+]>
+<pedidos>
+    <pedido>
+        <empresa CIF="Q456789" sector="sector_informatico" actividad="desarrollo web">Deloitte</empresa>
+        <productos>
+          <producto cod-producto="E12R" unidades="10">Impresora</producto>
+          <producto cod-producto="E13R" unidades="20">Procesador Intel I7 9700</producto>
+        </productos>
+        <fecha>23-06-2019</fecha>
+        <factura num-factura="T143OE" cliente_ref="Q456789" productos="E12R E13R">
+            <emisor>&MiEmpresa;</emisor>
+            <total>6000€</total>
+            <fecha>23-09-2019</fecha>
+        </factura>
+    </pedido>
+    <pedido>
+        <empresa CIF="Y786989" sector="sector_inmobiliario" actividad="construccion"></empresa>
+        <productos>
+          <producto cod-producto="T67Y" unidades="30">Casco de obra</producto>
+          <producto cod-producto="T68Y" unidades="80">Vigas hierro</producto>
+        </productos>
+        <fecha>11-03-2019</fecha>
+    </pedido>
+    <pedido>
+        <cliente NIF="E78171789O">Pablo</cliente>
+        <productos>
+          <producto cod-producto="P90I" unidades="1">Camisa estampada</producto>
+          <producto cod-producto="P91I" unidades="1">Pantalones vaqueros</producto>
+          <producto cod-producto="P92I" unidades="2">Cinturon cuerO</producto>
+          <producto cod-producto="P93I" unidades="1">Abrigo de piel</producto>
+        </productos>
+        <fecha>09-01-2020</fecha>
+        <factura num-factura="U8909P" cliente_ref="E78171789O" productos="P90I P91I P92I P93I">
+            <emisor>&MiEmpresa;</emisor>
+            <total>250€</total>
+            <fecha>09-04-2020</fecha>
+        </factura>
+    </pedido>
+</pedidos>

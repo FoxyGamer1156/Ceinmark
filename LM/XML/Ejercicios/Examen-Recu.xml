@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE software [
+  <!ELEMENT software (programas,licencias)>
+  <!ELEMENT programas (programa+)>
+  <!ELEMENT programa (version+)>
+  <!ELEMENT licencias (licencia+)>
+  <!ELEMENT licencia EMPTY>
+  <!ELEMENT version EMPTY>
+  <!ATTLIST licencia nombre ID #REQUIRED>
+  <!ATTLIST version nombre NMTOKEN #REQUIRED>
+  <!ATTLIST version licencia CDATA #REQUIRED>
+  <!ATTLIST version fechaPublicacion CDATA #IMPLIED>
+]>
+<software xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../XSD/XSD_Examen_Recu.xsd">
+  <programas>
+    <programa>
+      <version nombre="1.84" licencia="GNU" fechaPublicacion="17/08/2021" />
+      <version nombre="1.85" licencia="GNU_v2" fechaPublicacion="22/11/2021" />
+      <version nombre="1.92" licencia="GNU" fechaPublicacion="11/02/2022" />
+    </programa>
+    <programa>
+      <version nombre="9.1.0" licencia="free" fechaPublicacion="15/09/2020" />
+      <version nombre="9.1.3" licencia="shareware"/>
+    </programa>
+  </programas>
+  <licencias>
+    <licencia nombre="GNU" />
+    <licencia nombre="GNU_v2" />
+    <licencia nombre="free" />
+    <licencia nombre="shareware" />
+  </licencias>
+</software>

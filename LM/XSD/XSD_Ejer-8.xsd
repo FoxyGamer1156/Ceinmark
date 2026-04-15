@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+<!-- Elementos simples definidos por el usuario -->
+
+<!-- Elementos simples -->
+    <xs:element name="fechaNacimiento">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:pattern value="(0?[1-9]|[12][0-9]|3[01]) de (enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre) de \d{4}"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+    <xs:element name="apodo">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:minLength value="3"/>
+                <xs:maxLength value="50"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+    <xs:element name="nombre">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:pattern value="[A-ZÁÉÍÓÚ]{1,2}[a-záéíóúü]{1,}((\s|-)[A-ZÁÉÍÓÚ]{1,2}[a-záéíóúü]{1,})*"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+<!-- Atributos -->
+
+<!-- Elementos compuestos por el usuario -->
+
+
+<!-- Elementos compuestos -->
+    <xs:element name="musico">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="nombre"/>
+                <xs:element ref="apodo"/>
+                <xs:element ref="fechaNacimiento"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="musicos">
+        <xs:complexType>
+            <xs:sequence minOccurs="1" maxOccurs="unbounded">
+                <xs:element ref="musico"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>

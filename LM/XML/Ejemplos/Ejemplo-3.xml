@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE personas [
+    <!ELEMENT personas (persona)+>
+    <!ELEMENT persona (nombre,apellido1,apellido2,email*,telefono_movil*,domicilio+)>
+    <!ELEMENT nombre (#PCDATA)>
+    <!ELEMENT apellido1 (#PCDATA)>
+    <!ELEMENT apellido2 (#PCDATA)>
+    <!ELEMENT email (#PCDATA)>
+    <!ELEMENT telefono_movil (#PCDATA)>
+    <!ELEMENT domicilio (#PCDATA)>
+]>
+<personas>
+        <persona>
+            <nombre>Carmen</nombre>
+            <apellido1>López</apellido1>
+            <apellido2>López</apellido2>
+            <email>carmen@gmail.com</email>
+            <telefono_movil>600100100</telefono_movil>
+            <telefono_movil>600200200</telefono_movil>
+            <domicilio>Calle Iturribide,20, Bilbao</domicilio>
+        </persona>
+        <persona>
+            <nombre>Carla</nombre>
+            <apellido1>Díez</apellido1>
+            <apellido2>Matecón</apellido2>
+            <email>carlad@gmail.com</email>
+            <email>carladm@yahoo.es</email>
+            <domicilio>Iturribide Kalea,88, Bilbao</domicilio>
+        </persona>
+        <persona>
+            <nombre>Miren</nombre>
+            <apellido1>Gaztañaga</apellido1>
+            <apellido2>Aramburu</apellido2>
+            <telefono_movil>700200200</telefono_movil>
+            <domicilio>Arenal Platza,11, 5 I, Bilbao</domicilio>
+            <domicilio>Universidades Kalea, 11, 2 CT, Bilbao</domicilio>
+        </persona>
+</personas>

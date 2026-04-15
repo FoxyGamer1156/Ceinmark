@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE animales [
+  <!ELEMENT animales (animal)+>
+  <!ELEMENT animal (especie, nombre , edad , fecha_Entrada , fecha_Adopcion? , descripcion , chip?, (adoptar | apadrinar))>
+  <!ELEMENT especie (pedigree)>
+  <!ELEMENT adoptar (adoptante,pago,)
+  <!ELEMENT pedigree (#PCDATA)>
+  <!ELEMENT nombre (#PCDATA)>
+  <!ELEMENT edad (#PCDATA)>
+  <!ELEMENT fecha_Entrada (#PCDATA)>
+  <!ELEMENT fecha_Adopcion (#PCDATA)>
+  <!ELEMENT descripcion (#PCDATA)>
+  <!ELEMENT chip EMPTY>
+  <!ATTLIST animal id ID #REQUIRED>
+  <!ATTLIST animal genero (macho | hembra) #REQUIRED>
+  <!ATTLIST chip MAC ID #REQUIRED>
+  <!ATTLIST adoptar CIF
+]>
+<animales>
+  <animal id="PAS17982741" genero="macho">
+    <especie>
+    </especie>
+    <nombre></nombre>
+    <edad></edad>
+    <fecha_Entrada></fecha_Entrada>
+    <fecha_Adopcion></fecha_Adopcion>
+    <descripcion></descripcion>
+    <chip MAC="2264436321"/>
+    <adoptar></adoptar>
+  </animal>
+</animales>
