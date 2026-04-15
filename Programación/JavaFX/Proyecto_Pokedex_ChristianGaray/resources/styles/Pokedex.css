@@ -1,0 +1,106 @@
+.menuIzq{
+    -fx-border-color: #E2E8F0;
+    -fx-border-width: 0 3 0 0;
+    -fx-background-color: #FFFFFF;
+}
+.botonIzqHome{
+    -fx-background-color: transparent;
+    -fx-border-width: 2 2 2 2;
+    -fx-border-color: gray;
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+}
+.botonIzqHome:hover{
+    -fx-background-color: rgba(128, 128, 128, 0.4);
+    -fx-border-width: 2 2 2 2;
+    -fx-border-color: gray;
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+}
+.botonIzqPokedex{
+    -fx-background-color: transparent;
+    -fx-border-width: 2 2 2 2;
+    -fx-border-color: gray;
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+}
+.botonIzqPokedex:hover{
+    -fx-background-color: rgba(188, 0, 7, 0.4);
+    -fx-border-width: 2 2 2 2;
+    -fx-border-color: gray;
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+}
+.botonIzqTeamBuilder{
+    -fx-background-color: transparent;
+    -fx-border-width: 2 2 2 2;
+    -fx-border-color: gray;
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+}
+.botonIzqTeamBuilder:hover{
+    -fx-background-color: rgba(60, 77, 203, 0.4);
+    -fx-border-width: 2 2 2 2;
+    -fx-border-color: gray;
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+}
+.botonIzqGestorEntrenadores{
+    -fx-background-color: transparent;
+    -fx-border-width: 2 2 2 2;
+    -fx-border-color: gray;
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+}
+.botonIzqGestorEntrenadores:hover{
+    -fx-background-color: rgba(77, 173, 91, 0.4);
+    -fx-border-width: 2 2 2 2;
+    -fx-border-color: gray;
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+}
+.botonIzqGestorPokedex{
+    -fx-background-color: transparent;
+    -fx-border-width: 2 2 2 2;
+    -fx-border-color: gray;
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+}
+.botonIzqGestorPokedex:hover{
+    -fx-background-color: rgba(123, 44, 191, 0.4);
+    -fx-border-width: 2 2 2 2;
+    -fx-border-color: gray;
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+}
+.botonIzqCerrarSesion{
+    -fx-background-color: #BC0007;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 17;
+    -fx-background-insets: 0;
+    -fx-background-radius: 5;
+}
+.botonIzqCerrarSesion:hover{
+    -fx-border-color: #3b82f6;
+    -fx-border-width: 3 3 3 3;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+
+}
+
+.gridImagenPesoAltura{
+    -fx-background-color: #ECEDEE;
+    -fx-background-radius: 5;
+}
+.gridPeso{
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 5;
+}
+.gridAltura{
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 5;
+}
+.centered-column .table-cell{
+    -fx-aligment: CENTER;
+}
+
