@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Login Biblioteca Gustavo</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--<link rel="stylesheet" href="">-->
+    </head>
+    <body>
+        <main>
+            <h1>Biblioteca Gustavo Login</h1>
+            <form action="ServletLoginBiblio" method="post">
+                <h2>Introduce tus nombre de usuario y contraseña</h2>
+                <label for="emailUsur">Usuario:</label>
+                <input type="email" id="emailUsur" name="emailUsur" placeholder="ejemplo@mail.com" required>
+                <label for="contrasenaUsur">Contraseña:</label>
+                <input type="password" id="contrasenaUsur" name="contrasenaUsur">
+                <input type="submit" value="Iniciar Sesion" name="inciarSesion" required/>
+            </form>
+            <br>
+            <a href="altaUsur">¿No estas registrado?</a>
+        </main>
+    </body>
+</html>
